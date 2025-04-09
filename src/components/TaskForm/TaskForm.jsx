@@ -30,19 +30,19 @@ export default function TaskForm({ addTask, editingTask, updateTask }) {
       <input
         type="text"
         placeholder="Título de la tarea"
-        className="w-full p-2 mb-2 border border-neutral-600 rounded bg-primary-50 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white"
+        className="w-full p-2 mb-2 border border-neutral-600 rounded bg-primary-50 text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white"
         value={task.title}
         onChange={(e) => setTask({ ...task, title: e.target.value })}
       />
       <textarea
         placeholder="Descripción (opcional)"
-        className="w-full p-2 mb-2 border border-neutral-600 rounded bg-primary-50 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white"
+        className="w-full p-2 mb-2 border border-neutral-600 rounded bg-primary-50 text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white"
         value={task.description}
         onChange={(e) => setTask({ ...task, description: e.target.value })}
       />
       <button
         type="submit"
-        className="w-full bg-primary-400 hover:bg-primary-300 text-white font-bold py-2 px-4 rounded shadow-soft transition"
+        className="w-full bg-primary-400 hover:bg-primary-300 text-black font-bold py-2 px-4 rounded shadow-soft transition"
       >
         {editingTask ? 'Actualizar Tarea' : 'Agregar Tarea'}
       </button>

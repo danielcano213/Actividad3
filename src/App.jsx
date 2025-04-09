@@ -11,7 +11,7 @@ function App() {
     const savedTasks = localStorage.getItem('tasks')
     return savedTasks ? JSON.parse(savedTasks) : []
   })
-  
+
   const [filter, setFilter] = useState('all')
   const [editingTask, setEditingTask] = useState(null)
 
@@ -28,13 +28,13 @@ function App() {
   }
 
   const toggleComplete = (id) => {
-    setTasks(tasks.map(task => 
+    setTasks(tasks.map(task =>
       task.id === id ? { ...task, completed: !task.completed } : task
     ))
   }
 
   const updateTask = (updatedTask) => {
-    setTasks(tasks.map(task => 
+    setTasks(tasks.map(task =>
       task.id === updatedTask.id ? updatedTask : task
     ))
     setEditingTask(null)
@@ -47,14 +47,14 @@ function App() {
   })
 
   return (
-    <div className="min-h-screen bg-primary-50 text-white px-4 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold my-6 text-center text-white">
+    <div className="min-h-screen bg-primary-50 text-black px-6 py-8 max-w-4xl mx-auto text-[18px]">
+      <h1 className="text-4xl font-bold mb-8 text-center">
         Gestor de Tareas
       </h1>
-      
+
       <Routes>
         <Route path="/" element={
-          <>
+          <div className="space-y-6">
             <TaskForm 
               addTask={addTask} 
               editingTask={editingTask}
@@ -68,7 +68,7 @@ function App() {
               toggleComplete={toggleComplete}
               setEditingTask={setEditingTask}
             />
-          </>
+          </div>
         }/>
       </Routes>
     </div>

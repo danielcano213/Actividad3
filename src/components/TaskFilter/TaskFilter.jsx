@@ -13,7 +13,7 @@ export default function TaskFilter({ currentFilter, setFilter }) {
           onClick={() => setFilter(filter.value)}
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             currentFilter === filter.value
-              ? 'bg-primary-400 text-white shadow-glow'
+              ? 'bg-primary-400 text-black shadow-glow'
               : 'bg-primary-100 text-neutral-800 hover:bg-primary-200'
           }`}
         >

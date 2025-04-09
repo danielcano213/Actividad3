@@ -15,6 +15,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "date-fns": "^4.1.0",
     "localforage": "^1.10.0",
+    "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.0",
